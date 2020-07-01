@@ -207,6 +207,8 @@
           1,
           null,
           1,
+          1,
+          1,
           null
         ]
       },
@@ -216,8 +218,83 @@
           null
         ]
       },
-      "/Users/cece/turing/2mod/projects/adopt_dont_shop_2005/app/controllers/welcome_controller.rb": {
+      "/Users/cece/turing/2mod/projects/adopt_dont_shop_2005/spec/features/shelters/show_spec.rb": {
         "lines": [
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/cece/turing/2mod/projects/adopt_dont_shop_2005/spec/features/welcome/index_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/cece/turing/2mod/projects/adopt_dont_shop_2005/app/models/shelter.rb": {
+        "lines": [
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/cece/turing/2mod/projects/adopt_dont_shop_2005/app/models/application_record.rb": {
+        "lines": [
+          1,
+          1,
+          null
+        ]
+      },
+      "/Users/cece/turing/2mod/projects/adopt_dont_shop_2005/app/controllers/shelters_controller.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null,
+          null,
           1,
           1,
           null,
@@ -230,8 +307,16 @@
           1,
           null
         ]
+      },
+      "/Users/cece/turing/2mod/projects/adopt_dont_shop_2005/app/controllers/welcome_controller.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          null
+        ]
       }
     },
-    "timestamp": 1593623747
+    "timestamp": 1593637173
   }
 }
