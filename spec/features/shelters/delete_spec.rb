@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe "shelters index page", type: :feature do
-  it "can create a new shelter" do
+  it "can delete a shelter" do
     shelter_1 = Shelter.create(name: "Forever Homes",
                                address: "123 Rainbow Road",
                                city: "Walla Walla",
@@ -13,23 +13,13 @@ RSpec.describe "shelters index page", type: :feature do
                                state: "Colorado",
                                zip: 80401)
 
-    visit '/shelters'
+    visit "/shelters"
 
-    expect(page).to_not have_content("Best Friends Animal Society")
+    expect(page).to have_content(shelter_2.name)
 
-    click_on "New Shelter"
+    click_on "Delete #{shelter_2.name}"
 
-    expect(current_path).to eq('/shelters/new')
-
-    fill_in :name, with: "Best Friends Animal Society"
-    fill_in :address, with: "2005 1100 East"
-    fill_in :city, with: "Salt Lake City"
-    fill_in :state, with: "Utah"
-    fill_in :zip, with: "84106"
-
-    click_button "Create Shelter"
-
-    expect(current_path).to eq("/shelters")
-    expect(page).to have_content("Best Friends Animal Society")
+    expect(current_path).to eq('/shelters')
+    expect(page).to_not have_content("Foothills Animal Shelter")
   end
 end

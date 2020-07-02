@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe "Edit Shelter", type: :feature do
+RSpec.describe "Update Shelter", type: :feature do
   it "can edit a shelters info" do
     shelter_1 = Shelter.create(name: "Forever Homes",
                                address: "123 Rainbow Road",
@@ -16,7 +16,7 @@ RSpec.describe "Edit Shelter", type: :feature do
     visit "/shelters/#{shelter_2.id}"
     expect(page).to_not have_content("Golden Animal Shelter")
 
-    click_on "Edit Shelter"
+    click_on "Update Shelter"
 
     expect(current_path).to eq("/shelters/#{shelter_2.id}/edit")
 
