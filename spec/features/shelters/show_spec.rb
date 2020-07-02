@@ -14,25 +14,13 @@ RSpec.describe "shelters show info page", type: :feature do
 
     visit "/shelters/#{shelter_1.id}"
 
-    # # expect(page).to have_content(shelter_1.name)
-    # expect(page).to have_content("#{shelter_1.name}")
-    # # expect(page).to have_content(shelter_1.address)
-    # expect(page).to have_content("#{shelter_1.address}")
-    # # expect(page).to have_content(shelter_1.city)
-    # expect(page).to have_content("#{shelter_1.city}")
-    # # expect(page).to have_content(shelter_1.state)
-    # expect(page).to have_content("#{shelter_1.state}")
-    # # expect(page).to have_content(shelter_1.zip)
-    # expect(page).to have_content("#{shelter_1.zip}")
-    # # expect(page).to have_content(shelter_2.name)
-    # expect(page).to have_content("#{shelter_2.name}")
-    # # expect(page).to have_content(shelter_2.address)
-    # expect(page).to have_content("#{shelter_2.address}")
-    # # expect(page).to have_content(shelter_2.city)
-    # expect(page).to have_content("#{shelter_2.city}")
-    # # expect(page).to have_content(shelter_2.state)
-    # expect(page).to have_content("#{shelter_2.state}")
-    # # expect(page).to have_content(shelter_2.zip)
-    # expect(page).to have_content("#{shelter_2.zip}")
+    expect(page).to have_content(shelter_1.name)
+    expect(page).to have_content("Address: #{shelter_1.address}")
+    expect(page).to have_content("City: #{shelter_1.city}")
+    expect(page).to have_content("State: #{shelter_1.state}")
+    expect(page).to have_content("Zipcode: #{shelter_1.zip}")
+
+    expect(page).to_not have_content(shelter_2.name)
+    expect(page).to_not have_content("City: #{shelter_2.city}")
   end
 end
