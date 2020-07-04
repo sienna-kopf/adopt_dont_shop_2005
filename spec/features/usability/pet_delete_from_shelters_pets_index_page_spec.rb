@@ -1,7 +1,7 @@
 require 'rails_helper'
 
-RSpec.describe "Update a pet from shelters pets index page" do
-  it "can follow a link from shelters pets index page to a form to update the pet" do
+RSpec.describe "Delete a pet from shelters pets index page" do
+  it "can click a link on the shelters Pets index page to delete the pet" do
     shelter = Shelter.create(name: "Foothills Animal Shelter",
                                address: "580 McIntyre St.",
                                city: "Golden",
@@ -14,10 +14,13 @@ RSpec.describe "Update a pet from shelters pets index page" do
               sex: "male",
               adoptability: true,
               shelter: shelter)
+
     visit "/shelters/#{shelter.id}/pets"
+    expect(page).to have_content("Frankie")
 
-    click_on "Update #{pet.name}"
+    click_on "Delete #{pet.name}"
 
-    expect(current_path).to eq("/pets/#{pet.id}/edit")
+    expect(current_path).to eq("/pets")
+    expect(page).to_not have_content("Frankie")
   end
 end
