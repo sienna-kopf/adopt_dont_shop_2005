@@ -20,11 +20,16 @@ class PetsController < ApplicationController
   def edit
     @pet = Pet.find(params[:pet_id])
   end
-  
+
   def update
     @pet = Pet.find(params[:pet_id])
     @pet.update(pet_params)
     redirect_to "/pets/#{@pet.id}"
+  end
+
+  def delete
+    Pet.delete(params[:pet_id])
+    redirect_to '/pets'
   end
 
   def shelter_index
