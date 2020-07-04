@@ -2,11 +2,11 @@ require 'rails_helper'
 
 RSpec.describe "pets show page" do
   it "can display the info about a specific pet" do
-    shelter = Shelter.create!(name: "Forever Homes",
-                             address: "123 Rainbow Road",
-                             city: "Walla Walla",
-                             state: "Washington",
-                             zip: 99362)
+    shelter = Shelter.create!(name: "Hopeful Homes",
+                             address: "345 Fun Ct",
+                             city: "Portland",
+                             state: "Oregon",
+                             zip: 88888)
     pet_1 = Pet.create!(image: "https://www.catological.com/wp-content/uploads/2020/03/CatSleepingCurled-1024x730.jpeg",
                        name: "Bagel",
                        description: "Small tabby. Very cuddly. Would berry much love a forever home <3",
