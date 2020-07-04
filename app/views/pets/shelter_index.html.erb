@@ -1,8 +1,12 @@
 <a href="/shelters">Shelter Index</a>
 
-<%= @pets.each do |pet| %>
+<h1>Adoptable Pets for <%= @shelter.name %></h1>
+
+<% @pets.each do |pet| %>
   <img src= <%= pet.image %>>
   <h3><%= pet.name %></h3>
   <p>Approximate Age: <%= pet.approximate_age %></p>
   <p>Sex: <%= pet.sex %></p>
 <% end %>
+
+<%= link_to "Back to Shelter", "/shelters/#{@shelter.id}" %>

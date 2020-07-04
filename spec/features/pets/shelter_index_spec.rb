@@ -1,7 +1,7 @@
 require 'rails_helper'
 
-RSpec.describe "pets show page" do
-  it "can display the info about a pets" do
+RSpec.describe "pets shelter index page" do
+  it "can display the info about all the pets from a specific shelter" do
     shelter = Shelter.create!(name: "Forever Homes",
                              address: "123 Rainbow Road",
                              city: "Walla Walla",

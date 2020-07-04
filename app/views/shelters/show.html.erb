@@ -8,4 +8,6 @@
   <li>Zipcode: <%= @shelter.zip %></li>
 </ul>
 
+<%= link_to "#{@shelter.name} Pets", "/shelters/#{@shelter.id}/pets" %>
+
 <%= link_to "Update Shelter", "/shelters/#{@shelter.id}/edit" %>
