@@ -12,14 +12,14 @@ RSpec.describe "pets show page" do
                        description: "Small tabby. Very cuddly. Would berry much love a forever home <3",
                        approximate_age: 3,
                        sex: "Female",
-                       adoptability: false,
+                       adoptability: "not adoptable",
                        shelter: shelter)
     pet_2 = shelter.pets.create!(image: "https://image.shutterstock.com/image-photo/kitty-cat-munchkin-fluffy-animal-260nw-1151252666.jpg",
                        name: "Mackenzie",
                        description: "Spunky personality. Loves to play with toys. Take me home today!",
                        approximate_age: 1,
                        sex: "Female",
-                       adoptability: true)
+                       adoptability: "adoptable")
 
     visit "/pets/#{pet_1.id}"
 
@@ -27,6 +27,6 @@ RSpec.describe "pets show page" do
     expect(page).to have_content(pet_1.description)
     expect(page).to have_content(pet_1.approximate_age)
     expect(page).to have_content(pet_1.sex)
-    expect(page).to have_content("Adoptable: #{pet_1.adoptability}")
+    expect(page).to have_content("Adoption Status: #{pet_1.adoptability}")
   end
 end
