@@ -1,7 +1,7 @@
 require 'rails_helper'
 
-RSpec.describe "pets index page", type: :feature do
-  it "can see all pets" do
+RSpec.describe "pets show page" do
+  it "can display the info about a pets" do
     shelter = Shelter.create!(name: "Forever Homes",
                              address: "123 Rainbow Road",
                              city: "Walla Walla",
@@ -16,10 +16,14 @@ RSpec.describe "pets index page", type: :feature do
                        approximate_age: 1,
                        sex: "Female")
 
-    visit "/pets"
+    visit "/shelters/#{shelter.id}/pets"
+
+    expect(page).to have_content(pet_2.name)
+    expect(page).to have_content(pet_2.approximate_age)
+    expect(page).to have_content(pet_2.sex)
 
     expect(page).to have_content(pet_1.name)
-    expect(page).to have_content("Approximate Age: #{pet_1.approximate_age}")
-    expect(page).to have_content("Sex: #{pet_1.sex}")
+    expect(page).to have_content(pet_1.approximate_age)
+    expect(page).to have_content(pet_1.sex)
   end
 end
