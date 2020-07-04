@@ -1,6 +1,6 @@
 <a href="/shelters">Shelter Index</a>
 
-<h1>Adoptable Pets for <%= @shelter.name %></h1>
+<h1>Adoptable Pets for <a href="/shelters/<%= @shelter.id%>"><%= @shelter.name %></a></h1>
 
 <% @pets.each do |pet| %>
   <img src= <%= pet.image %>>
