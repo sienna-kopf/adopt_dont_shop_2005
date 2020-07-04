@@ -1,4 +1,4 @@
-<h2>Update Pet</h2>
+<h2>Update <a href="/pets/<%= @pet.id %>"><%= @pet.name%></a></h2>
 
 <%= form_tag "/pets/#{@pet.id}", method: :patch do %>
   <%= label_tag :image %>
