@@ -5,3 +5,5 @@
 <p>Approximate Age: <%= @pet.approximate_age %></p>
 <p>Sex: <%= @pet.sex %></p>
 <p>Adoption Status: <%= @pet.adoptability %></p>
+
+<%= link_to "Update Pet", "/pets/#{@pet.id}/edit" %>
