@@ -13,7 +13,7 @@ RSpec.describe "delete an existing pet" do
                       description: "Brown and white ferret. Loves to climb around in its cage and would appreciate a home with space to play!",
                       approximate_age: 4,
                       sex: "male",
-                      adoptability: true,
+                      adoptability: "adoptable",
                       shelter: shelter)
 
     visit "/pets/#{pet.id}"

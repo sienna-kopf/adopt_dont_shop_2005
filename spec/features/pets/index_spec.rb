@@ -9,12 +9,17 @@ RSpec.describe "pets index page", type: :feature do
                              zip: 99362)
     pet_1 = Pet.create!(image: "https://www.catological.com/wp-content/uploads/2020/03/CatSleepingCurled-1024x730.jpeg",
                        name: "Bagel",
+                       description: "Small tabby cat. Loves to cuddle!",
                        approximate_age: 3,
-                       sex: "Female", shelter: shelter)
+                       sex: "Female",
+                       adoptability: "not adoptable",
+                       shelter: shelter)
     pet_2 = shelter.pets.create!(image: "https://image.shutterstock.com/image-photo/kitty-cat-munchkin-fluffy-animal-260nw-1151252666.jpg",
                        name: "Mackenzie",
+                       description: "Spunky personality. Loves to play and would appreciate a family with lots of energy!",
                        approximate_age: 1,
-                       sex: "Female")
+                       sex: "Female",
+                       adoptability: "adoptable")
 
     visit "/pets"
 

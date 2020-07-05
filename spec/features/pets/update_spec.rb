@@ -13,7 +13,7 @@ RSpec.describe "update an existing pet" do
                       description: "Used to belong to a professional rock climber. Loves bath time!",
                       approximate_age: 7,
                       sex: "male",
-                      adoptability: true,
+                      adoptability: "adoptable",
                       shelter: shelter)
 
     visit "/pets/#{pet.id}"
