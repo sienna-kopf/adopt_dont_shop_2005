@@ -60,6 +60,12 @@
    padding: 10px 10px;
  }
 
+ .header_links{
+   text-align: right;
+   background-color: rgb(190, 186, 191);
+   padding: 3px 10px;
+ }
+
  #update_delete_section {
    margin: auto;
  }
