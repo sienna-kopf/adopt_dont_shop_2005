@@ -1,3 +1,6 @@
+<%= link_to "Pet Index", "/pets" %>
+<%= link_to "Shelter Index", "/shelters" %>
+
 <h2>Update <a href="/shelters/<%= @shelter.id %>"><%= @shelter.name%></a></h2>
 
 <%= form_tag "/shelters/#{@shelter.id}", method: :patch do %>
