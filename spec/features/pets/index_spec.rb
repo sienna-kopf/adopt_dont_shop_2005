@@ -12,7 +12,7 @@ RSpec.describe "pets index page", type: :feature do
                         description: "Small tabby cat. Loves to cuddle!",
                         approximate_age: 3,
                         sex: "Female",
-                        adoptability: "not adoptable",
+                        adoptability: "pending adoption",
                         shelter: shelter)
     pet_2 = shelter.pets.create!(image: "https://image.shutterstock.com/image-photo/kitty-cat-munchkin-fluffy-animal-260nw-1151252666.jpg",
                                  name: "Mackenzie",
