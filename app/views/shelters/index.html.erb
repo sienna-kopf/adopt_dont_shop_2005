@@ -7,7 +7,9 @@
 
 <% @shelters.each do |shelter| %>
   <h3 class=shelter_name><a href="/shelters/<%= shelter.id %>"><%= shelter.name %></a></h3>
-  <p class=update_button><%=  link_to "Update #{shelter.name}", "/shelters/#{shelter.id}/edit" %></p><br>
+  <p class=update_button><%=  link_to "Update #{shelter.name}", "/shelters/#{shelter.id}/edit" %></p>
+  <p class=delete_button><%= link_to "Delete #{shelter.name}", "/shelters/#{shelter.id}", method: :delete %></p>
+  <br>
 <% end %>
 
 <p class=new_shelter><%= link_to "New Shelter", "/shelters/new" %></p>
