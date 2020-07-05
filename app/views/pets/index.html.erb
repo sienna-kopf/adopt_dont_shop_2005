@@ -11,6 +11,7 @@
   <h3><a href="/pets/<%= pet.id %>"><%= pet.name %></a></h3>
   <p>Approximate Age: <%= pet.approximate_age %></p>
   <p>Sex: <%= pet.sex %></p>
+  <p>Current Shelter: <%= pet.shelter.name %></p>
   <p class=update_button><%= link_to "Update #{pet.name}", "/pets/#{pet.id}/edit" %></p>
   <p class=delete_button><%= link_to "Delete #{pet.name}", "/pets/#{pet.id}", method: :delete %></p>
   </section>
