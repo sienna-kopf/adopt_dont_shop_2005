@@ -1,16 +1,16 @@
 <%= link_to "Pet Index", "/pets" %>
 <%= link_to "Shelter Index", "/shelters" %>
 
-<a href="/shelters">Shelter Index</a>
-
 <h1><a href="/shelters/<%= @shelter.id %>"><%= @shelter.name %></a></h1>
-<ul>
+<ul id=shelter_info>
   <li>Address: <%= @shelter.address %></li>
   <li>City: <%= @shelter.city %></li>
   <li>State: <%= @shelter.state %></li>
   <li>Zipcode: <%= @shelter.zip %></li>
 </ul>
 
-<%= link_to "#{@shelter.name} Pets", "/shelters/#{@shelter.id}/pets" %>
+<section>
+<p id=link_to_pets_of_shelter><%= link_to "#{@shelter.name} Pets", "/shelters/#{@shelter.id}/pets" %></p>
 
-<%= link_to "Update Shelter", "/shelters/#{@shelter.id}/edit" %>
+<p class=update_button><%= link_to "Update Shelter", "/shelters/#{@shelter.id}/edit" %></p>
+</section>

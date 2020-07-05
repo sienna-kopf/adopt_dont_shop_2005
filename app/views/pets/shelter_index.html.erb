@@ -4,13 +4,15 @@
 <h1>Adoptable Pets for <a href="/shelters/<%= @shelter.id%>"><%= @shelter.name %></a></h1>
 
 <% @pets.each do |pet| %>
-  <img src= <%= pet.image %>>
+<section class=pet_info>
+  <img class=pet_image src= <%= pet.image %>>
   <h3><a href="/pets/<%= pet.id %>"><%= pet.name %></a></h3>
-  <%= link_to "Update #{pet.name}", "/pets/#{pet.id}/edit" %>
-  <%= link_to "Delete #{pet.name}", "/pets/#{pet.id}", method: :delete %>
   <p>Approximate Age: <%= pet.approximate_age %></p>
   <p>Sex: <%= pet.sex %></p>
+  <%= link_to "Update #{pet.name}", "/pets/#{pet.id}/edit" %>
+  <%= link_to "Delete #{pet.name}", "/pets/#{pet.id}", method: :delete %>
+  </section>
 <% end %>
 
-<%= link_to "Create Pet", "/shelters/#{@shelter.id}/pets/new" %>
-<%= link_to "Back to Shelter", "/shelters/#{@shelter.id}" %>
+<p id=create_button><%= link_to "Create Pet", "/shelters/#{@shelter.id}/pets/new" %></p>
+<p id=back_to_shelter><%= link_to "Back to Shelter", "/shelters/#{@shelter.id}" %></p>

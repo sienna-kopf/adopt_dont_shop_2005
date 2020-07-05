@@ -3,11 +3,13 @@
 
 <h1><a href="/pets/<%= @pet.id %>"><%= @pet.name %></a></h1>
 
-<img src= <%= @pet.image %>>
+<section class=pet_info>
+<img class=pet_image src= <%= @pet.image %>>
 <p><%= @pet.description %></p>
 <p>Approximate Age: <%= @pet.approximate_age %></p>
 <p>Sex: <%= @pet.sex %></p>
 <p>Adoption Status: <%= @pet.adoptability %></p>
 
-<%= link_to "Update Pet", "/pets/#{@pet.id}/edit" %>
-<%= link_to "Delete Pet", "/pets/#{@pet.id}", method: :delete %>
+<p class=update_button><%= link_to "Update Pet", "/pets/#{@pet.id}/edit" %></p>
+<p class=delete_button><%= link_to "Delete Pet", "/pets/#{@pet.id}", method: :delete %></p>
+</section>
