@@ -13,11 +13,10 @@ RSpec.describe "shelters index page", type: :feature do
                                state: "Colorado",
                                zip: 80401)
   end
-  
+
   it "can use a link to delete a shelter from the shelters index page" do
 
-    visit "/shelters"
-
+    visit "/shelters/#{@shelter_2.id}"
     expect(page).to have_content(@shelter_2.name)
 
     click_on "Delete #{@shelter_2.name}"

@@ -12,7 +12,7 @@
 </ul>
 
 <section>
-<p id=link_to_pets_of_shelter><%= link_to "#{@shelter.name} Pets", "/shelters/#{@shelter.id}/pets" %></p>
-
+<p id=link_to_pets_of_shelter><%= link_to "#{@shelter.name} Pets", "/shelters/#{@shelter.id}/pets" %></p><br>
 <p class=update_button><%= link_to "Update Shelter", "/shelters/#{@shelter.id}/edit" %></p>
+<p class=delete_button><%= link_to "Delete #{@shelter.name}", "/shelters/#{@shelter.id}", method: :delete %></p>
 </section>
