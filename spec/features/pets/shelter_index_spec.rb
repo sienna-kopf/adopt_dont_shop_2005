@@ -23,10 +23,12 @@ RSpec.describe "pets shelter index page" do
 
     visit "/shelters/#{shelter.id}/pets"
 
+    expect(page).to have_xpath("//img[@src='https://image.shutterstock.com/image-photo/kitty-cat-munchkin-fluffy-animal-260nw-1151252666.jpg']")
     expect(page).to have_content(pet_2.name)
     expect(page).to have_content(pet_2.approximate_age)
     expect(page).to have_content(pet_2.sex)
 
+    expect(page).to have_xpath("//img[@src='https://www.catological.com/wp-content/uploads/2020/03/CatSleepingCurled-1024x730.jpeg']")
     expect(page).to have_content(pet_1.name)
     expect(page).to have_content(pet_1.approximate_age)
     expect(page).to have_content(pet_1.sex)

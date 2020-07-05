@@ -28,6 +28,7 @@ RSpec.describe "create a new pet" do
 
       expect(current_path).to eq("/shelters/#{shelter.id}/pets")
 
+      expect(page).to have_xpath("//img[@src='https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT7udIOy8BXHLWl3uzUyIYubCyvVgRlArZSJw&usqp=CAU']")
       expect(page).to have_content(new_pet.name)
       expect(page).to have_content("Approximate Age: #{new_pet.approximate_age}")
       expect(page).to have_content("Sex: #{new_pet.sex}")

@@ -23,6 +23,7 @@ RSpec.describe "pets show page" do
 
     visit "/pets/#{pet_1.id}"
 
+    expect(page).to have_xpath("//img[@src='https://www.catological.com/wp-content/uploads/2020/03/CatSleepingCurled-1024x730.jpeg']")
     expect(page).to have_content(pet_1.name)
     expect(page).to have_content(pet_1.description)
     expect(page).to have_content(pet_1.approximate_age)
