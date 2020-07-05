@@ -764,6 +764,7 @@
           2,
           2,
           2,
+          2,
           null,
           null,
           1,
@@ -774,6 +775,7 @@
       },
       "/Users/cece/turing/2mod/projects/adopt_dont_shop_2005/app/models/pet.rb": {
         "lines": [
+          1,
           1,
           1,
           1,
@@ -930,6 +932,6 @@
         ]
       }
     },
-    "timestamp": 1593917331
+    "timestamp": 1593917410
   }
 }
